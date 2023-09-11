@@ -5,6 +5,11 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <PackageId>Gamma.NET</PackageId>
+    <Version>2023.9.11</Version>
+    <Authors>YendisFish</Authors>
+    <Description>A library to provide dynamic interop with native libraries.</Description>
   </PropertyGroup>
 
 </Project>

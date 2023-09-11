@@ -4,6 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
 #development files
+*.nupkg
 
 #IDE generated files
 .vscode

@@ -1,9 +1,9 @@
-using Prism.Types;
-using Prism.Native;
+using Gamma.Types;
+using Gamma.Native;
 
 using System.Runtime.InteropServices;
 
-namespace Prism;
+namespace Gamma;
 
 public unsafe class LibImporter : IDisposable
 {

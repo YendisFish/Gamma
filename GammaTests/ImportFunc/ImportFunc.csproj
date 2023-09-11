@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Prism.NET\Prism.NET.csproj" />
+    <ProjectReference Include="..\..\Gamma.NET\Gamma.NET.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

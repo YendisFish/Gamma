@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using System.Runtime.Versioning;
 
-namespace Prism.Native;
+namespace Gamma.Native;
 
 public static class NativeFunctions
 {

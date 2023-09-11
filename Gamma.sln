@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gamma.NET", "Gamma.NET\Gamma.NET.csproj", "{1E81E09E-6D68-4A69-8FF2-69A8B2A4634E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GammaTests", "GammaTests", "{A5D2981A-1896-4133-B541-556EF84788A7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImportFunc", "GammaTests\ImportFunc\ImportFunc.csproj", "{974BD267-3914-4DA4-BD11-5CF0391CB875}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E81E09E-6D68-4A69-8FF2-69A8B2A4634E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E81E09E-6D68-4A69-8FF2-69A8B2A4634E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E81E09E-6D68-4A69-8FF2-69A8B2A4634E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E81E09E-6D68-4A69-8FF2-69A8B2A4634E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974BD267-3914-4DA4-BD11-5CF0391CB875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974BD267-3914-4DA4-BD11-5CF0391CB875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974BD267-3914-4DA4-BD11-5CF0391CB875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974BD267-3914-4DA4-BD11-5CF0391CB875}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{974BD267-3914-4DA4-BD11-5CF0391CB875} = {A5D2981A-1896-4133-B541-556EF84788A7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {09C3E66C-EB04-4530-B19F-5B9200D96B3A}
+	EndGlobalSection
+EndGlobal

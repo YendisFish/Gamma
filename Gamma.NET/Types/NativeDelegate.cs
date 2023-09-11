@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Prism.Types;
+namespace Gamma.Types;
 
 public unsafe struct NativeDelegate
 {

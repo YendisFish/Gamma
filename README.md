@@ -1,17 +1,17 @@
-# Prism
+# Gamma
 With C#s incredibly disappointing support for
 importing unmanaged libraries, I have decided
 to write a wrapper to import and marshal unmanaged
 types into managed code. In other words, I
-would like to introduce Prism! An all new, niche
+would like to introduce Gamma! An all new, niche
 library I am working on to interop with native
 libraries.
 
 # Supported Platforms
-Prism supports both Windows and Linux, with
+Gamma supports both Windows and Linux, with
 hopeful future support for OSX!
 
-Keep in mind that on linux, Prism needs the
+Keep in mind that on linux, Gamma needs the
 C standard libraries to be installed to run!
 
 # Dependencies
@@ -57,7 +57,7 @@ And now we are ready to create our C#!
 
 Windows:
 ```cs
-using(Importer import = new Importer("mylib.dll"))
+using(LibImporter import = new LibImporter("mylib.dll"))
 {
     NativeDelegate<int> getint = import.LoadFunc("GetInt");
     int foo = getint.Invoke();
@@ -68,7 +68,7 @@ using(Importer import = new Importer("mylib.dll"))
 
 Linux:
 ```cs
-using(Importer import = new Importer("libmylib.so"))
+using(LibImporter import = new LibImporter("libmylib.so"))
 {
     NativeDelegate<int> getint = import.LoadFunc("GetInt");
     int foo = getint.Invoke();
