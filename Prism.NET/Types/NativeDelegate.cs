@@ -8,6 +8,11 @@ public unsafe struct NativeDelegate
 
     public NativeDelegate(IntPtr funcPtr)
     {
+        if(funcPtr == IntPtr.Zero)
+        {
+            throw new Exception($"Failed to load function from imported library!");
+        }
+
         nativeFunc = (delegate*<void>)nativeFunc;
     }
 
@@ -20,10 +25,14 @@ public unsafe struct NativeDelegate
 public unsafe struct NativeDelegate<T>
 {
     internal delegate*<T> nativeFunc { get; set; }
-    //[UnmanagedFunctionPointer(CallingConvention.Cdecl)]internal delegate T nFunc();
 
     public NativeDelegate(IntPtr funcPtr)
     {
+        if(funcPtr == IntPtr.Zero)
+        {
+            throw new Exception($"Failed to load function from imported library!");
+        }
+
         nativeFunc = (delegate*<T>)funcPtr;
     }
 
@@ -39,6 +48,11 @@ public unsafe struct NativeDelegate<T, TARG1>
 
     public NativeDelegate(IntPtr funcPtr)
     {
+        if(funcPtr == IntPtr.Zero)
+        {
+            throw new Exception($"Failed to load function from imported library!");
+        }
+
         nativeFunc = (delegate*<TARG1, T>)nativeFunc;
     }
 
@@ -54,6 +68,11 @@ public unsafe struct NativeDelegate<T, TARG1, TARG2>
 
     public NativeDelegate(IntPtr funcPtr)
     {
+        if(funcPtr == IntPtr.Zero)
+        {
+            throw new Exception($"Failed to load function from imported library!");
+        }
+
         nativeFunc = (delegate*<TARG1, TARG2, T>)nativeFunc;
     }
 
@@ -69,6 +88,11 @@ public unsafe struct NativeDelegate<T, TARG1, TARG2, TARG3>
 
     public NativeDelegate(IntPtr funcPtr)
     {
+        if(funcPtr == IntPtr.Zero)
+        {
+            throw new Exception($"Failed to load function from imported library!");
+        }
+
         nativeFunc = (delegate*<TARG1, TARG2, TARG3, T>)nativeFunc;
     }
 
@@ -84,6 +108,11 @@ public unsafe struct NativeDelegate<T, TARG1, TARG2, TARG3, TARG4>
 
     public NativeDelegate(IntPtr funcPtr)
     {
+        if(funcPtr == IntPtr.Zero)
+        {
+            throw new Exception($"Failed to load function from imported library!");
+        }
+
         nativeFunc = (delegate*<TARG1, TARG2, TARG3, TARG4, T>)nativeFunc;
     }
 
@@ -99,6 +128,11 @@ public unsafe struct NativeDelegate<T, TARG1, TARG2, TARG3, TARG4, TARG5>
 
     public NativeDelegate(IntPtr funcPtr)
     {
+        if(funcPtr == IntPtr.Zero)
+        {
+            throw new Exception($"Failed to load function from imported library!");
+        }
+
         nativeFunc = (delegate*<TARG1, TARG2, TARG3, TARG4, TARG5, T>)nativeFunc;
     }
 

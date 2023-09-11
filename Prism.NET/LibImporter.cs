@@ -5,18 +5,23 @@ using System.Runtime.InteropServices;
 
 namespace Prism;
 
-public unsafe class Importer : IDisposable
+public unsafe class LibImporter : IDisposable
 {
     internal string path { get; set; }
     internal IntPtr libHandle { get; set; }
 
-    public Importer(string filename)
+    public LibImporter(string filename)
     {
         path = new FileInfo(filename).FullName;
 
         #pragma warning disable CA1416
         libHandle = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? NativeFunctions.LoadLibrary(path) : NativeFunctions.dlopen(path, 2);
         #pragma warning restore CA1416
+
+        if(libHandle == IntPtr.Zero)
+        {
+            throw new Exception($"Could not load library: {filename}");
+        }
     }
 
     public NativeDelegate LoadFunction(string symbol)
@@ -75,7 +80,7 @@ public unsafe class Importer : IDisposable
         #pragma warning restore CA1416
     }
 
-    ~Importer()
+    ~LibImporter()
     {
         #pragma warning disable CA1416
         if(RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) { NativeFunctions.FreeLibrary(libHandle); } else { NativeFunctions.dlclose(libHandle); }
